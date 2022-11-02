@@ -11,6 +11,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool isLoaded = false;
+  late num temp;
+  late num pressure;
+  late num hue;
+  late num cover;
+  late String city;
+
   @override
   void initState() {
     getCurrentLocation();
@@ -19,7 +26,27 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return SafeArea(
+        child: Scaffold(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff03a9f4),
+          Color(0xff4caf50),
+          Color(0xff9c27b0)
+        ], begin: Alignment.bottomLeft, end: FractionalOffset.topRight)),
+        child: Visibility(
+          visible: isLoaded,
+          child: Column(
+          ),replacement: Center(
+          child: ,
+        ),
+        ),
+      ),
+    ));
   }
 
   getCurrentLocation() async {
@@ -36,16 +63,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   getCurrentCityWeather(Position position) async {
     var client = http.Client();
-    var uri = "${k.domain}lat=${position.latitude}&lon=${position
-        .longitude}&appid=${k.apiKey}";
-    var url=Uri.parse(uri);
-    var response =await client.get(url);
-    if(response.statusCode==200){
-      var data= response.body;
+    var uri =
+        "${k.domain}lat=${position.latitude}&lon=${position.longitude}&appid=${k.apiKey}";
+    var url = Uri.parse(uri);
+    var response = await client.get(url);
+    if (response.statusCode == 200) {
+      var data = response.body;
       print(data);
-    }
-else{
-  print(response.statusCode);
+    } else {
+      print(response.statusCode);
     }
   }
 }
