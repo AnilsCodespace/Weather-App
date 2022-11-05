@@ -1,4 +1,5 @@
 # weather_app
+![image](https://user-images.githubusercontent.com/87460435/200127864-e75cd706-0370-455a-a94b-7b04a3e62844.png)
 
 Weather App that displays current weather of the locations
 
