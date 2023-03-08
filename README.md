@@ -12,7 +12,7 @@ A simple weather app using openweathermap API
 
 ![image](https://user-images.githubusercontent.com/87460435/200127963-89192bf1-d2da-4aa2-8323-72623bf31f15.png)
 
-# **API** + Openweathermaps api
++ # **API** Openweathermaps api
 
 # 🔖 **LICENCE**
 Apache-2.0
