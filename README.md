@@ -2,8 +2,8 @@
 A simple weather app using openweathermap API
 
 # **✨Features**
-* Shows weather condition of current loction.
-* Shows weather condition according to user preferred city.
+* **Shows weather condition of current location.**
+* **Shows weather condition according to user preferred city.**
 
 # 📸 **ScreenShots**
 
