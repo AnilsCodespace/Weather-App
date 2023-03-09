@@ -1,5 +1,5 @@
 # ⛈Weather App
-A simple weather app using openweathermap API
+### A simple weather app using openWeatherMap API
 
 # **✨Features**
 * **Shows weather condition of current location.**
